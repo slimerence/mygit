@@ -1,0 +1,46 @@
+html{
+    background-image: url("/images/bg.jpg");
+    font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 1.4rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 1.6rem;
+    }
+}
+
+#navigation
+{
+    background-color: rgba(10,10,10,0.8)!important;
+}
+
+#comment{
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+
+.commentcard{
+    margin-top:1em;
+    box-shadow: 0.15em 0.15em 0.2em #d4d4d4;
+}
+
+.card-btn{
+    float: right;
+    margin-right: 0.8em;
+}
+
+.morecomment{
+    margin-top:3em;
+}
