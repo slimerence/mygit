@@ -7,7 +7,7 @@
 <!--<![endif]-->
 
 @include('layouts.frontend.head')
-<body>
+<body style="background-image: url({{asset('images/bg.jpg')}})">
 <div class="bg">
 @include('layouts.frontend.header')
 @include('layouts.frontend.slider')

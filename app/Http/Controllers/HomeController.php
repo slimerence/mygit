@@ -15,17 +15,16 @@ class HomeController extends Controller
 
     public function update(Request $request){
         //$message = Message::create([$request->all()]);
-        $message = Message::create([
-            'firstname'=>$request->firstname,
-            'lastname'=>$request->lastname,
-            'comment'=>$request->comment,
-        ]);
+
+        $message = Message::create($request->get('message'));
+
 
         return redirect ('/');
     }
 
     public function destroy(Request $request, Message $message){
-        $message->delete();
-        return redirect('/');
+        if($message->delete())
+            return redirect('/');
+        else
     }
 }

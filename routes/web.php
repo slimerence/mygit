@@ -15,4 +15,4 @@ Route::get('/', 'HomeController@home');
 Route::post('/','HomeController@update');
 Route::delete('/{message}','HomeController@destroy');
 
-Route::post('/{id}','CommentController@Add');
+Route::post('/add','CommentController@add')->name('newcmt');
