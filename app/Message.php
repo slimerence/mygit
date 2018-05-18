@@ -10,7 +10,7 @@ class Message extends Model
     use SoftDeletes;
     public $timestamps=false;
     protected $fillable = [
-        'firstname', 'lastname', 'content','othercomment'
+        'firstname', 'lastname', 'content',
     ];
 
     /**

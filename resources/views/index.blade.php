@@ -24,10 +24,10 @@
                                onclick="$('{{'#comment'.$message->id}}').slideToggle();">
                     </div>
                     <form action="{{route("newcmt")}}" class="morecomment" method="post" target="_self">
-                        {{csrf_field()}}
-                        <input type="hidden" name="message_id" value="{{$message->id}}">
+                        @csrf
+                        <input type="hidden" name="cmt[message_id]" value="{{$message->id}}">
                     <div class="input-group" id="{{'comment'.$message->id}}" style="display: none">
-                            <input type="text" class="form-control typedcmt" placeholder="Make more comments..." name="content">
+                            <input type="text" class="form-control typedcmt" placeholder="Make more comments..." name="cmt[content]">
                             <div class="input-group-append">
                                 <input type="submit" class="btn btn-outline-secondary" value="confirm">
                                 <button class="btn btn-outline-secondary" type="button" onclick="$('{{'#comment'.$message->id}}').slideToggle(function() {
